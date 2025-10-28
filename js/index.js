@@ -25,7 +25,7 @@ document.addEventListener('DOMContentLoaded', function() {
             alert('Error: No se pudo conectar al servidor Python.');
         }
     
-    });
+    }); 
 
     if (bototres){
         bototres.addEventListener('click', async function(evento){

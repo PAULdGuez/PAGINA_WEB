@@ -18,7 +18,7 @@ def manejar_clic():
     return {"mensaje": "¡Recibido en el servidor!"}
 
 @app.route("/clic-btres")
-def manejar_ctres():
+def manejar_ctres(): 
     print("el boton tres a sido presionado")
     return{"mensaje" : "recibido en el servidor"}
 # 6. Ejecuta el servidor cuando corras el archivo
