@@ -1,0 +1,22 @@
+.contenedor_seccion_uno{
+    padding: 1%;
+    color: black;
+}
+.contenedor_seccion_dos{
+    padding:  5%;
+}
+.contenedor_seccion_dos a{
+    width: 150px;
+    position: relative;
+    display: inline-block;
+    color: black;
+    text-decoration: none;
+    border: 5px solid black;
+    padding: 1px;
+    margin-bottom: 5px;
+    width: 150px;
+}
+.contenedor_seccion_dos a:hover{
+    color:white;
+    background-color: black;
+}

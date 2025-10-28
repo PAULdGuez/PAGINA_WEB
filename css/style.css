@@ -1,0 +1,17 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family:'Courier New', Courier, monospace;
+    color: white;
+}
+.my_navbar{
+    background-color: rgba(255, 255, 255, 0.7) !important;
+}
+
+.my_navbar div, .my_navbar ul{
+    background-color: transparent !important;
+}
