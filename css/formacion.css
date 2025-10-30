@@ -1,25 +1,49 @@
 .contenedor_seccion_uno{
     padding: 1%;
     color: black;
+    margin-top: 10px;
 }
 .contenedor_seccion_dos{
     padding:  5%;
+    margin-top: 10px;
+    display: grid;
+    place-items: center; /* ¡Esta línea hace las dos cosas!*/
 }
 .contenedor_seccion_dos a{
     width: 150px;
     position: relative;
-    display: inline-block;
+    /*display: flex;*/
     color: black;
     text-decoration: none;
     border: 5px solid black; 
     padding: 1px;
     margin-bottom: 5px;
     width: 150px;
+    
+
 }
 .contenedor_seccion_dos a:hover{
     color:white;
     background-color: black;
 }
+
+.contenedor_seccion_uno, 
+.contenedor_seccion_dos {
+  background: linear-gradient(145deg, #f0f0f0, #d9d9d9); /* Degradado suave */
+  border-radius: 20px; /* Bordes redondeados */
+  /*box-shadow: 6px 6px 12px #b8b8b8, -6px -6px 12px #ffffff; /* Sombras para efecto 3D */
+  padding: 20px; /* Espacio interno */
+  transition: all 0.3s ease-in-out;
+}
+
+/* Efecto al pasar el mouse (resalta el 3D) */
+.contenedor_seccion_uno:hover, 
+.contenedor_seccion_dos:hover {
+  box-shadow: inset 6px 6px 12px #b8b8b8, inset -6px -6px 12px #ffffff;
+  transform: translateY(-3px); /* Pequeño levantamiento */
+}
+
+
 .sombrados{
     height: 100vh;
     background-attachment: fixed;
@@ -36,7 +60,9 @@
     text-align: center;
     padding: 10px;
     margin-top: 30px;
-
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    border: 1px solid #eee;
+    
 }
 #imagen-previa{
     max-width: 200px;
