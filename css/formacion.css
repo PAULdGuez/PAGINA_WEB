@@ -38,3 +38,9 @@
     margin-top: 30px;
 
 }
+#imagen-previa{
+    max-width: 200px;
+    max-height: 200px;
+    border-radius: 5px;
+    border-color: black;
+}

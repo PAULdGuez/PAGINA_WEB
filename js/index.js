@@ -3,6 +3,10 @@ document.addEventListener('DOMContentLoaded', function() {
     const miBoton = document.getElementById('btn-portafolio');
     const bototres = document.getElementById('botontres');
 
+    const file = document.getElementById('subir-archivo');
+    const previa = document.getElementById('imagen-previa');
+    const uploadcontainer = document.getElementById('upload-container');
+
     // "async" le dice a la función que espere una respuesta
     miBoton.addEventListener('click', async function(evento) {
         
@@ -39,6 +43,36 @@ document.addEventListener('DOMContentLoaded', function() {
                 alert('ERROR AL CONECAT CON EL SERVIDOR');
             }
         });
+    }
+
+    if (file){
+        file.addEventListener('change', async function(event){
+
+        try {
+            // 1. Llama al "mesero" (fetch) y dale la URL de tu servidor
+            const respuesta = await fetch('http://127.0.0.1:5000/clic-subir');
+            // 2. Espera la respuesta del servidor
+            const data = await respuesta.json();
+            // 3. Muestra la respuesta del servidor en la consola del NAVEGADOR
+            console.log('Respuesta del servidor:', data.mensaje);
+
+            const archivo = event.target.files[0];
+            if (archivo){
+                const imagenURL = URL.createObjectURL(archivo);
+                previa.src = imagenURL;
+                previa.classList.remove('d-none');
+                uploadcontainer.classList.remove('justify-content-center');
+                uploadcontainer.classList.add('justify-content-between');
+
+            }
+
+        } catch (error) {
+            // 4. Si el servidor está apagado o hay un error
+            console.error('Error al conectar con el servidor:', error);
+            alert('Error: No se pudo conectar al servidor Python.');
+        }
+        });
+        
     }
 
    

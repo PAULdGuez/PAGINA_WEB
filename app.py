@@ -22,5 +22,11 @@ def manejar_ctres():
     print("el boton tres a sido presionado")
     return{"mensaje" : "recibido en el servidor"}
 # 6. Ejecuta el servidor cuando corras el archivo
+
+@app.route("/clic-subir")
+def manejar_subir():
+    print("se ha subido una imagen")
+    return {"mensaje": "recibido en el servidor"}
+
 if __name__ == "__main__":
     app.run(port=5000, debug=True)
