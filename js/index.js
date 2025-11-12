@@ -7,6 +7,28 @@ document.addEventListener('DOMContentLoaded', function() {
     const previa = document.getElementById('imagen-previa');
     const uploadcontainer = document.getElementById('upload-container');
 
+    const elemento = document.getElementById("animacion-formacion");
+    const textoOriginal = elemento.textContent; // Guarda el texto original
+    const velocidadEscritura = 100; // Milisegundos por letra
+    let i = 0; // Índice para recorrer el texto
+
+    // Borra el texto original para empezar a escribir
+    elemento.textContent = "";
+
+    function escribir() {
+        if (i < textoOriginal.length) {
+            // Añade la siguiente letra
+            elemento.textContent += textoOriginal.charAt(i);
+            i++;
+            // Llama a esta misma función otra vez después de 'velocidadEscritura'
+            setTimeout(escribir, velocidadEscritura);
+        }
+    }
+
+    // Inicia el efecto
+    escribir();
+
+
     // "async" le dice a la función que espere una respuesta
     miBoton.addEventListener('click', async function(evento) {
         

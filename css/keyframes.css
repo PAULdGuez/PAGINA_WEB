@@ -18,3 +18,13 @@
         top: 0;
     }
 }
+
+/* Definición de la animación */
+@keyframes parpadeo {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+}

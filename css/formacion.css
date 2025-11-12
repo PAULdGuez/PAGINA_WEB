@@ -27,22 +27,21 @@
     background-color: black;
 }
 
-.contenedor_seccion_uno, 
-.contenedor_seccion_dos {
-  background: linear-gradient(145deg, #f0f0f0, #d9d9d9); /* Degradado suave */
-  border-radius: 20px; /* Bordes redondeados */
-  /*box-shadow: 6px 6px 12px #b8b8b8, -6px -6px 12px #ffffff; /* Sombras para efecto 3D */
-  padding: 20px; /* Espacio interno */
+.contenedor_seccion_uno {
+  background-color: white; /* Degradado suave */
+  border-radius: 10px; /* Bordes redondeados */
   transition: all 0.3s ease-in-out;
+  border-color:10px solid black;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1); /* Sombra sutil */
+  margin: 20px 0; 
+  
 }
 
 /* Efecto al pasar el mouse (resalta el 3D) */
-.contenedor_seccion_uno:hover, 
-.contenedor_seccion_dos:hover {
+.contenedor_seccion_uno:hover {
   box-shadow: inset 6px 6px 12px #b8b8b8, inset -6px -6px 12px #ffffff;
   transform: translateY(-3px); /* Pequeño levantamiento */
 }
-
 
 .sombrados{
     height: 100vh;
@@ -69,4 +68,24 @@
     max-height: 200px;
     border-radius: 5px;
     border-color: black;
+}
+
+.linea-arcoiris {
+  border: none;
+  height: 4px;
+  background-image: linear-gradient(
+    to right,
+    #ec112a,   /* Rojo */
+    #d487f0,   /* Naranja vibrante */
+    #7b0816,   /* Amarillo */
+    #8e0a19,   /* Verde neón (lime) */
+    #681088    /* Azul eléctrico */
+  );
+}
+#animacion-formacion::after {
+  content: '|'; /* El caracter del cursor */
+  margin-left: 5px;
+  opacity: 1;
+  /* Animación para que parpadee */
+  animation: parpadeo 0.7s infinite;
 }
