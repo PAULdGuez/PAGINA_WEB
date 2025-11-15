@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Catálogo de Etiquetas HTML</title>
+    
+    <link rel="stylesheet" href="style.css">
+    
+    <style>
+        /* body { background-color: #f0f0f0; } */
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Soy el título principal de la página (H1)</h1>
+        
+        <nav>
+            <ul>
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#servicios">Servicios</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <article>
+            <h2>Esto es un artículo (H2)</h2>
+            <p>
+                Este es un párrafo. Contiene <strong>texto importante (negrita semántica)</strong> y
+                <em>texto con énfasis (cursiva semántica)</em>.
+            </p>
+        </article>
+
+        <section>
+            <h3>Esto es una sección (H3)</h3>
+            <p>Puedes tener múltiples secciones dentro de <main>.</p>
+
+            <div class="un-contenedor-generico">
+                <p>Este párrafo está dentro de un &lt;div&gt;.</p>
+                <p>Puedes usar <span>esto</span> para cambiar el color de una palabra.</p>
+            </div>
+        </section>
+
+        <section>
+            <h4>Contenido multimedia (H4)</h4>
+            
+            <img src="https://via.placeholder.com/150" alt="Texto descriptivo si la imagen no carga">
+
+            <figure>
+                <img src="https://via.placeholder.com/150" alt="Otra imagen">
+                <figcaption>Esta es la descripción (caption) de la imagen.</figcaption>
+            </figure>
+
+            <video width="320" height="240" controls>
+                <source src="movie.mp4" type="video/mp4">
+                Tu navegador no soporta la etiqueta de video.
+            </video>
+            
+            <audio controls>
+                <source src="audio.mp3" type="audio/mpeg">
+                Tu navegador no soporta la etiqueta de audio.
+            </audio>
+        </section>
+
+        <section>
+            <h5>Listas (H5)</h5>
+            
+            <p>Lista ordenada (con números):</p>
+            <ol>
+                <li>Primer elemento</li>
+                <li>Segundo elemento</li>
+                <li>Tercer elemento</li>
+            </ol>
+            
+            <p>Lista no ordenada (con viñetas):</p>
+            <ul>
+                <li>Elemento A</li>
+                <li>Elemento B</li>
+                <li>Elemento C</li>
+            </ul>
+        </section>
+
+        <section>
+            <h6>Tablas (H6)</h6>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Encabezado 1</th> <th>Encabezado 2</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Dato 1A</td> <td>Dato 1B</td>
+                    </tr>
+                    <tr>
+                        <td>Dato 2A</td>
+                        <td>Dato 2B</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <section>
+            <h2>Formulario de Contacto</h2>
+
+            <form action="/enviar-datos" method="post">
+                <div>
+                    <label for="nombre">Nombre:</label>
+                    <input type="text" id="nombre" name="usuario_nombre">
+                </div>
+
+                <div>
+                    <label for="correo">Email:</label>
+                    <input type="email" id="correo" name="usuario_email">
+                </div>
+
+                <div>
+                    <label for="mensaje">Mensaje:</label>
+                    <textarea id="mensaje" name="usuario_mensaje"></textarea>
+                </div>
+                
+                <div>
+                    <p>Elige una opción (radio buttons):</p>
+                    <input type="radio" id="op1" name="opcion_radio" value="opcion1">
+                    <label for="op1">Opción 1</label>
+                    
+                    <input type="radio" id="op2" name="opcion_radio" value="opcion2">
+                    <label for="op2">Opción 2</label>
+                </div>
+                
+                <div>
+                    <p>Elige varias opciones (checkboxes):</p>
+                    <input type="checkbox" id="check1" name="interes1" value="Bicis">
+                    <label for="check1">Me gustan las bicis</label>
+                    
+                    <input type="checkbox" id="check2" name="interes2" value="Coches">
+                    <label for="check2">Me gustan los coches</label>
+                </div>
+
+                <div>
+                    <label for="selector">Elige un país (dropdown):</label>
+                    <select id="selector" name="pais">
+                        <option value="mx">México</option> <option value="es">España</option>
+                        <option value="ar">Argentina</option>
+                    </select>
+                </div>
+
+                <div>
+                    <button type="submit">Enviar Formulario</button>
+                    </div>
+            </form>
+        </section>
+        
+        <aside>
+            <h4>Publicidad</h4>
+            <p>Contenido que no es parte de <main> pero está relacionado.</p>
+        </aside>
+
+        <blockquote>
+            <p>"Esto es una cita célebre."</p>
+            <cite>- Autor Famoso</cite>
+        </blockquote>
+
+        <hr> </main>
+
+    <footer>
+        <p>Copyright © 2025. Todos los derechos reservados.</p>
+        <p>
+            <a href="#contacto">Contacto</a> | <a href="#privacidad">Política de Privacidad</a>
+        </p>
+    </footer>
+
+    <script src="app.js"></script>
+    
+    <script>
+        // console.log("¡La página ha cargado!");
+    </script>
+
+</body>
+
+</html>

@@ -2,9 +2,9 @@
     height: 100vh;
     background-attachment: fixed;
     background-position: center;
-    background-repeat: no-repeat;
+    background-repeat: cover;
     background-size: cover;
-    background-image: url("../img/fondonegro.png");
+    background-image: url("../img/uach.jpeg");
 }
 .sombra{
     position: absolute;
@@ -32,6 +32,22 @@
     font-size: 3vw;
     margin-bottom: 5px;
 }
+
+.div_foto_perfil{
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+.img_perfil{
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    border: 5px solid white;
+    object-fit: cover;
+    box-shadow: 0 0 30px rgba(0,0,0,0.5);
+}
+
+
 
 .links{
     margin: 15px;
